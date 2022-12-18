@@ -1,20 +1,62 @@
 body {
   background-color: #9373D9;
+  height: 100vh;
 }
 
 #title {
   color: #F2E205;
+  text-align: center;
 }
 
-#card {
-  border: 3px #FFF solid;
-  width: 70%;
-  height: 100%;
+#card-Question {
+  border: 3px #E3D8F2 solid;
+  width: 60%;
+  height: 15rem;
+  border-radius: 2rem;
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  background-color: #F2E205;
 }
-#card div {
+#card-Question div {
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  color: #9373D9;
+}
+
+#TowImage {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.imgQuestion {
+  width: 80px;
+  margin: 1rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards a {
+  text-decoration: none;
+}
+
+.card {
+  width: 400px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #F299EC;
+  margin-bottom: 10px;
+  border: 2px #833ce6 solid;
+  text-align: center;
+}
+.card span {
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
 }/*# sourceMappingURL=style.css.map */
