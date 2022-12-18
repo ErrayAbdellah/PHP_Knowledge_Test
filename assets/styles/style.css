@@ -1,3 +1,20 @@
 body {
-  background-color: red;
+  background-color: #9373D9;
+}
+
+#title {
+  color: #F2E205;
+}
+
+#card {
+  border: 3px #FFF solid;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+#card div {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

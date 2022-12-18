@@ -1,5 +1,21 @@
-$body-color:red;
+$bady-color :#9373D9;
 
 body{
-    background-color: $body-color;
+    background-color: $bady-color;
+}
+
+#title{
+    color: #F2E205;
+}
+#card{
+    border: 3px #FFF solid; 
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    div{
+        display: flex;
+        align-items: center;
+    }
 }
