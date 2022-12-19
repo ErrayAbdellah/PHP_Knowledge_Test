@@ -1,5 +1,5 @@
 body {
-  background-color: #9373D9;
+  background-color: #4f3e75;
 }
 
 #title {
@@ -30,7 +30,7 @@ body {
   padding: 0 1rem;
   font-family: "Times New Roman", Times, serif;
   font-size: large;
-  color: #9373D9;
+  color: #4f3e75;
 }
 #card-Question #circle {
   width: 5rem;
@@ -88,4 +88,128 @@ body {
   width: 410px;
   height: 42px;
   font-size: larger;
+}
+
+#myMove1 {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-name: menagerie;
+          animation-name: menagerie;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  position: absolute;
+  background-color: #1e1d19;
+  opacity: 0.3;
+  box-shadow: 0 0 4px #F2E205, 0 0 15px #F2E205, 0 0 20px #F2E205, 0 0 30px #F2E205, 0 0 50px #F2E205, 0 0 70px #F2E205, 0 0 80px #F2E205;
+}
+
+#myMove2 {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-name: menagerie2;
+          animation-name: menagerie2;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  position: absolute;
+  background-color: #1e1d19;
+  opacity: 0.3;
+  box-shadow: 0 0 4px #F2E205, 0 0 15px #F2E205, 0 0 20px #F2E205, 0 0 30px #F2E205, 0 0 50px #F2E205, 0 0 70px #F2E205, 0 0 80px #F2E205;
+}
+
+@-webkit-keyframes menagerie {
+  0% {
+    opacity: 0;
+    background: #fff;
+    left: 0;
+  }
+  25% {
+    opacity: 1;
+    background: #000;
+  }
+  50% {
+    transform: rotate(0.5turn);
+    left: 80%;
+    background: #ff0;
+  }
+  75% {
+    opacity: 1;
+    background: #000;
+  }
+  100% {
+    opacity: 0;
+    background: #fff;
+    left: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes menagerie {
+  0% {
+    opacity: 0;
+    background: #fff;
+    left: 0;
+  }
+  25% {
+    opacity: 1;
+    background: #000;
+  }
+  50% {
+    transform: rotate(0.5turn);
+    left: 80%;
+    background: #ff0;
+  }
+  75% {
+    opacity: 1;
+    background: #000;
+  }
+  100% {
+    opacity: 0;
+    background: #fff;
+    left: 0;
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes menagerie2 {
+  0% {
+    opacity: 0;
+    background: #fff;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+    background: #000;
+  }
+  100% {
+    transform: rotate(0.5turn);
+    left: 80%;
+    background: #ff0;
+  }
+}
+@keyframes menagerie2 {
+  0% {
+    opacity: 0;
+    background: #fff;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+    background: #000;
+  }
+  100% {
+    transform: rotate(0.5turn);
+    left: 80%;
+    background: #ff0;
+  }
 }/*# sourceMappingURL=style.css.map */
