@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP_Knowledge_Test-Frontend</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <title>PHP_Knowledge_Test-Frontend</title>
 </head>
 <body>
+    <!-- <div id="myMove">
+    </div> -->
     <!-- title -->
     <h2 id="title">PHP Knowledge Test-Frontend</h2>
     <!-- Question -->
     <div id="card-Question">
-        <div >
-            <span>How many spikes does a porcupine have ?</span>
+        <div id="circle">
+            <img src="images/php.png" alt="" width="102%">
         </div>
+        <p id="text" >
+            <span>How many spikes does a porcupine have ?</span>
+        </p>
     </div>
     <!-- images -->
     <div id="TowImage">
@@ -23,14 +28,17 @@
     </div>
     <!-- Responses -->
     <div class="cards">
-        <a href=""><div class="card"><span class="textReponse">1 PHP Knowledge Test-Frontend</span></div></a>
-        <a href=""><div class="card"><span class="textReponse">2 PHP Knowledge Test-Frontend</span></div></a>
-        <a href=""><div class="card"><span class="textReponse">3 PHP Knowledge Test-Frontend</span></div></a>
-        <a href=""><div class="card"><span class="textReponse">4 PHP Knowledge Test-Frontend</span></div></a>
+        <button type="button" class="card" id="card1" onclick="reponse()" value="1">1 PHP Knowledge Test-Frontend</button>
+        <button type="button" class="card" id="card2" onclick="reponse()" value="2">2 PHP Knowledge Test-Frontend </button>
+        <button type="button" class="card" id="card3" onclick="reponse()" value="3">3 PHP Knowledge Test-Frontend </button>
+        <button type="button" class="card" id="card4" onclick="reponse()" value="4">4 PHP Knowledge Test-Frontend </button>
+        <!-- <div class="bf"></div> -->
     </div>
     <!-- footer -->
     <footer>
 
     </footer>
+
+    <script src="assets/js/scripte.js"></script>
 </body>
 </html>

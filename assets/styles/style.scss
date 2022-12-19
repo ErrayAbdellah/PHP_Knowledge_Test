@@ -3,12 +3,14 @@ $text-color-yellow :#F2E205;
 
 body{
     background-color: $bady-color;
-    height: 100vh;
+    // height: 100vh;
 }
 
 #title{
     color: $text-color-yellow;
    text-align: center;
+   margin-top: 0%;
+   position: relative;
 }
 #card-Question{
     border: 3px #E3D8F2 solid; 
@@ -16,17 +18,71 @@ body{
     height: 15rem;
     border-radius: 2rem;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5rem;
     background-color: $text-color-yellow;
-    div{
-        
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 4px #ef91e9,
+    0 0 15px #ef91e9,
+    0 0 20px #ef91e9,
+    0 0 30px #ef91e9;
+    
+    #text{
        margin: auto;
+       text-align: center;
+       padding: 0 1rem;
        font-family: 'Times New Roman', Times, serif;
        font-size: large;
        color: $bady-color;
     }
+    
+    #circle{
+        width: 5rem;
+        height:5rem;
+        border:3px solid #E3D8F2;
+        border-radius: 50%;
+        position: absolute;
+        // margin-left: 50%;
+        // margin-right: 50%;
+        // margin: 0 50%  50%;
+        margin-top: -3rem;
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(8, 7, 7, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+        transform: rotate(50deg);
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 }
+// #myMove
+// {
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 50%;
+//     color: #F2E205;
+//     position:sticky;
+//   border: 12px black solid;
+//   animation: mymove 5s infinite;
+
+// }
+// @keyframes mymove {
+//         0% { top: 0; left: 0; }
+//         30% { top: 50px; }
+//         68%, 72% { left: 50px; }
+//         100% { top: 100px; left: 100%; }
+//         100% { top: 100px; left: 100%; }
+//         68%, 72% { left: 50px; }
+//         30% { top: 50px; }
+//         0% { top: 0; left: 0; }
+// }
 
 #TowImage{
     display: flex;
@@ -42,9 +98,10 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     a{
         text-decoration: none;
     }
@@ -55,16 +112,26 @@ body{
     height: 40px;
     border-radius: 12px;
     background-color: #F299EC;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
     border: 2px #833ce6 solid;
     text-align: center;
-    
-    span{
-        
-        font-family: 'Times New Roman', Times, serif;
-        font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //z-index: 1000;
+    backdrop-filter: blur(15px);
+   
+    // //background: #ef91e9;
+    // box-shadow: 0 0 4px #ef91e9,
+    //             0 0 15px #ef91e9,
+    //             0 0 20px #ef91e9,
+    //             0 0 30px #ef91e9;
+    &:hover{
+        background-color:#ef91e9;
+        // color: aliceblue;
+        width: 410px;
+        height: 42px;
+        font-size: larger;
         
     }
-   
-    
 }

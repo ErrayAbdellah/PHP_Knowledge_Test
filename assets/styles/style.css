@@ -1,11 +1,12 @@
 body {
   background-color: #9373D9;
-  height: 100vh;
 }
 
 #title {
   color: #F2E205;
   text-align: center;
+  margin-top: 0%;
+  position: relative;
 }
 
 #card-Question {
@@ -14,15 +15,35 @@ body {
   height: 15rem;
   border-radius: 2rem;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #F2E205;
-}
-#card-Question div {
+  align-items: center;
+  flex-direction: column;
   margin: auto;
+  margin-top: 5rem;
+  background-color: #F2E205;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
+}
+#card-Question #text {
+  margin: auto;
+  text-align: center;
+  padding: 0 1rem;
   font-family: "Times New Roman", Times, serif;
   font-size: large;
   color: #9373D9;
+}
+#card-Question #circle {
+  width: 5rem;
+  height: 5rem;
+  border: 3px solid #E3D8F2;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -3rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(8, 7, 7, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  transform: rotate(50deg);
+}
+#card-Question #circle:hover {
+  transform: scale(1.2);
 }
 
 #TowImage {
@@ -39,9 +60,10 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 80%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 .cards a {
   text-decoration: none;
@@ -52,11 +74,18 @@ body {
   height: 40px;
   border-radius: 12px;
   background-color: #F299EC;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
   border: 2px #833ce6 solid;
   text-align: center;
-}
-.card span {
   font-family: "Times New Roman", Times, serif;
   font-size: large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.card:hover {
+  background-color: #ef91e9;
+  width: 410px;
+  height: 42px;
+  font-size: larger;
 }/*# sourceMappingURL=style.css.map */
