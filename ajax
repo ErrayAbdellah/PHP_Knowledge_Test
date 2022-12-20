@@ -1,0 +1,21 @@
+
+// HttpRequest -->  client server
+
+// ajax = new XMLHttpRequest();
+
+//ajax.open("GET","index.php",true,"user","password")
+
+// trus  ---> asynchronous
+// false ---> synchronous
+  
+//ajax.send()
+
+
+// XMLHttpRequest 
+
+// onreadyStateChange
+// readyState 0 1 2 3 4
+// responseText 
+// status 200->ok 404->not found
+// statusText
+
