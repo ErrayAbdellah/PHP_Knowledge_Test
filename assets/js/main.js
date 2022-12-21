@@ -6,13 +6,6 @@ let indexQst = 0 ;
  let qstCard    = document.getElementById('text');
  let bottun     =  document.querySelector('.card');
 
-//  qstCard.innerText = questions[0].question;
-//  card1.innerText = questions[0].choice1;
-//  card2.innerText = questions[0].choice2;
-//  card3.innerText = questions[0].choice3;
-//  card4.innerText = questions[0].choice4;
-
-
 function reponse(index)
 {
   //console.log(index.value)
@@ -38,7 +31,7 @@ document
       if(this.readyState===4 && this.status===200){
         let questionObjs = JSON.parse(this.responseText);
         let countQst = questionObjs.length ;
-        
+        console.log(countQst);
         addData(questionObjs[indexQst],countQst,index);
       }
     }
@@ -46,8 +39,6 @@ document
     aj.open("GET","../../questions.json",true);
     aj.send();
   }
-
-  // getQuestions();
 
   function addData(question,count,index){
     if(indexQst <count){
@@ -57,8 +48,8 @@ document
       card3.innerText   = question["choice3"];
       card4.innerText   = question['choice4'];
       let answer = question['answer'];
-      //console.log(index);
-      test(answer,index);
+      
+      // test(answer,index);
       indexQst++;
     }else{
       // location.reload()
@@ -67,9 +58,6 @@ document
   }
   
   function test(question,index){
-   
-    // console.log(question);
-    // console.log(index);
 
     if(question==index)
     {
@@ -80,50 +68,20 @@ document
     }
   }
  
-  //  switch(answer){
-  //   case 1 :
-  //     if(card1.value==answer)
-  //     {
-  //       alert("trus");
-  //     }else{
-  //       alert("false");
-  //     }
-  //   break;
-  //   case 2 :
-  //     if(card2.value==answer)
-  //     {
-  //       alert("trus");
-  //     }else{
-  //       alert("false");
-  //     }
-  //   break;
-  //   case 3 :
-  //     if(card3.value==answer)
-  //     {
-  //       alert("trus");
-  //     }else{
-  //       alert("false");
-  //     }
-  //   break;
-  //   case 4 :
-  //     if(card4.value==answer)
-  //     {
-  //       alert("trus");
-  //     }else{
-  //       alert("false");
-  //     }
-  //   break;
+  function randomUniqueNum(Count) {
 
-  //  }
-   
-   
-    // if(card1.valus===answer){
-
-    // }else if(card2.valus===answer){
-
-    // }else if(card3.valus===answer){
-
-    // }else if(card3.valus===answer)
-    // {
-
-    // }
+    let arr = []
+    for (let i = 1; i <= Count; i++) {
+      arr.push(i)
+    }
+  
+    let result = [];
+  
+    for (let i = 1; i <= Count; i++) {
+      const random = Math.floor(Math.random() * (Count - i));
+      result.push(arr[random]);
+      arr[random] = arr[Count - i];
+    }
+  
+    return result;
+  }

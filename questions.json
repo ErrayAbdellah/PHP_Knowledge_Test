@@ -27,7 +27,7 @@
     {
         "question": "Quelle version de PHP a introduit Try/catch Exception?",
         "choice1": "PHP 4", 
-        "choice2": " ", 
+        "choice2": "PHP 5 ", 
         "choice3": "PHP 5.3", 
         "choice4": "PHP 7.2",
         "answer": 2
