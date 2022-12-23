@@ -6,24 +6,14 @@ let indexQst = 0 ;
  let qstCard    = document.getElementById('text');
  let bottun     =  document.querySelector('.card');
 
-function reponse(index)
-{
-  //console.log(index.value)
-    getQuestions(index.value);
-}
+ 
+ getQuestions();
+ 
+ var light = document.getElementById('light');
 
-getQuestions();
 
-var light = document.getElementById('light');
 
-document
-  .documentElement
-  .addEventListener('mousemove', function handleMouseMove(event) {
-    light.style.setProperty('--light-position-y', (event.clientY - 50) + 'px');
-    light.style.setProperty('--light-position-x', (event.clientX - 50) + 'px');
-  });
-
-// ajax get DATA
+  // ajax get DATA
   function getQuestions(index){
     let aj = new XMLHttpRequest();
 
@@ -31,15 +21,15 @@ document
       if(this.readyState===4 && this.status===200){
         let questionObjs = JSON.parse(this.responseText);
         let countQst = questionObjs.length ;
-        console.log(countQst);
+        //console.log(countQst);
         addData(questionObjs[indexQst],countQst,index);
       }
     }
-
+    
     aj.open("GET","../../questions.json",true);
     aj.send();
   }
-
+  
   function addData(question,count,index){
     if(indexQst <count){
       qstCard.innerText = question['question'];
@@ -48,24 +38,31 @@ document
       card3.innerText   = question["choice3"];
       card4.innerText   = question['choice4'];
       let answer = question['answer'];
-      
-      // test(answer,index);
       indexQst++;
+      // checkAnswer(answer,index);
+      return answer;
     }else{
-      // location.reload()
+      location.reload()
       alert("fin");
     }
   }
-  
+  answer = addData();
+  console.log(answer);
+  function reponse(index)
+  {
+    //getQuestions(index.index);
+    console.log(index.value)
+  }
   function test(question,index){
-
-    if(question==index)
-    {
-      alert("true");
+    console.log(question);
+      if(question==index)
+      {
+        alert("true");
+        
+      }else{
+        alert("false");
+      }
       
-    }else{
-      alert("false");
-    }
   }
  
   function randomUniqueNum(Count) {
@@ -85,3 +82,5 @@ document
   
     return result;
   }
+
+  //console.log(randomUniqueNum(10))
