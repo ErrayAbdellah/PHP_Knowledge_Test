@@ -11,6 +11,8 @@ let indexQst = 0 ;
  var light = document.getElementById('light');
  var questionObjs =[];
  let countQst = 0;
+ let countRandom =[];
+ let score = 0;
 
 
 
@@ -23,7 +25,8 @@ let indexQst = 0 ;
       if(this.readyState===4 && this.status===200){
          questionObjs = JSON.parse(this.responseText);
          countQst = questionObjs.length ;
-        arrTest = questionObjs;       
+         countRandom = randomCount(countQst);
+         arrTest = questionObjs;       
        getData();
       }
     }
@@ -32,7 +35,7 @@ let indexQst = 0 ;
   }
   
   function getData(){
-    
+    //console.log()
     if(indexQst <countQst){
       qstCard.innerText = questionObjs[indexQst]['question'];
       card1.innerText   = questionObjs[indexQst]['choice1'];
@@ -40,48 +43,64 @@ let indexQst = 0 ;
       card3.innerText   = questionObjs[indexQst]["choice3"];
       card4.innerText   = questionObjs[indexQst]['choice4'];
       let answer        = questionObjs[indexQst]['answer'] ;
-     
       return answer;
     }else{
-      location.reload()
+      location.reload();
       alert("fin");
     }
   }
   
   function reponse(index)
   {
-    getQuestions()
-    console.log("this is index : "+index.value)
-    console.log("htis is answert : "+getData());
-    test(getData(),index.value)
+    getQuestions();
+    test(getData(),index);
+    indexQst++;
   }
+  
   function test(question,index){
-    console.log(question);
-      if(question==index)
+      if(question==index.value)
       {
-        alert("true");
+        //document.getElementById(index.id).style.backgroundColor = "blue";
+        // document.getElementById("hh").innerText = "blue";
+        setTimeout(() => {
+          $("#hh").text("Correct !!!");
+          $("#hh").css({'color':'green'});
+        }, 500);
+
+        score++;
+        //  alert("true");
+
+        //sleep(1000);
+        setTimeout(() => {
+          $("#hh").text("");
+        }, 1000);
         
       }else{
         alert("false");
       }
-      indexQst++;
+      //document.getElementById("hh").innerText = "";
   }
 
-  function randomUniqueNum(Count) {
+  function randomCount(Count) {
     let arr = []
+    let result = [];
     for (let i = 1; i <= Count; i++) {
       arr.push(i)
     }
-  
-    let result = [];
-  
     for (let i = 1; i <= Count; i++) {
       const random = Math.floor(Math.random() * (Count - i));
       result.push(arr[random]);
       arr[random] = arr[Count - i];
     }
-  
     return result;
+  }
+
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
   }
 
   //console.log(randomUniqueNum(10))
