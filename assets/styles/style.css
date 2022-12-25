@@ -21,7 +21,6 @@ body {
   margin-top: 5rem;
   background-color: #F2E205;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
 }
 #card-Question #text {
