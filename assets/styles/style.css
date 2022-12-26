@@ -310,34 +310,6 @@ body {
   width: 60%;
   bottom: 0;
   top: initial;
-  position: -webkit-sticky;
-  position: sticky;
-  -webkit-animation-name: mountains_behind;
-          animation-name: mountains_behind;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-delay: -2s;
-          animation-delay: -2s;
-}
-@-webkit-keyframes mountains_behind {
-  0% {
-    left: 2000px;
-    top: initial;
-  }
-  100% {
-    left: 0;
-    top: initial;
-  }
-}
-@keyframes mountains_behind {
-  0% {
-    left: 2000px;
-    top: initial;
-  }
-  100% {
-    left: 0;
-    top: initial;
-  }
 }
 #imgsHome #mountains_front {
   bottom: 0;
@@ -371,15 +343,35 @@ body {
     top: initial;
   }
 }
+#imgsHome #play {
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  background-color: rgb(228, 228, 228);
+  width: 8rem;
+  height: 3rem;
+  border-radius: 12rem;
+  padding-top: 1rem;
+  text-decoration: none;
+}
+#imgsHome #play:hover {
+  font-size: 2.2rem;
+  width: 8.2rem;
+  height: 3.2rem;
+  box-shadow: 0px 2px 8px rgb(228, 228, 228), 0px 3px 10px rgb(228, 228, 228), 0px 4px 20px rgb(228, 228, 228), 0px 10px 30px rgb(228, 228, 228);
+}
 
 .stepper-component {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 .stepper-component li {
   list-style: none;
   display: flex;
+  margin-left: 12rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -394,9 +386,9 @@ body {
   font-weight: 600;
 }
 .stepper-component li .progress {
-  margin: 6px 0;
-  width: 30px;
-  height: 30px;
+  margin: 3rem 0;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   background-color: #202731;
   display: grid;
@@ -406,17 +398,18 @@ body {
   cursor: pointer;
 }
 .stepper-component li .progress .checkMark {
-  font-size: 13px;
-  display: none;
+  font-size: 2rem;
 }
 .stepper-component li .progress p {
-  font-size: 12px;
+  font-size: 2rem;
+  z-index: 10;
 }
 .stepper-component li .progress::after {
   content: "";
   position: absolute;
-  width: 164px;
+  width: 16rem;
   height: 5px;
+  z-index: 0;
   background-color: #202731;
   right: 30px;
 }
@@ -426,6 +419,7 @@ body {
 }
 .stepper-component li .active {
   background-color: rgb(255, 118, 255);
+  z-index: 10;
 }
 .stepper-component li .active::after {
   background-color: rgb(255, 118, 255);
@@ -435,4 +429,36 @@ body {
 }
 .stepper-component li .active .checkMark {
   display: flex;
+}
+
+.info {
+  width: 50rem;
+  text-align: center;
+  margin: 3rem auto;
+  background-color: #F2E205;
+  border-radius: 2rem;
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
+}
+.info h1 {
+  font-size: 2rem;
+}
+.info p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.info button {
+  width: 8rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  background-color: #4f3e75;
+  color: #fff;
+  border-style: none;
+}
+.info button:hover {
+  width: 8.2rem;
+  height: 3.2rem;
+  font-size: 1.6rem;
 }/*# sourceMappingURL=style.css.map */

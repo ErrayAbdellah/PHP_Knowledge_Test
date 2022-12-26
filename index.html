@@ -5,54 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://kit.fontawesome.com/e29eb6764b.js" crossorigin="anonymous"></script>
     <title>PHP_Knowledge_Test-Frontend</title>
 </head>
 <body>
     <div id="light"></div>
-    
-    <div id="myMove1">
-    </div>
-    <div id="myMove2">
-    </div>
+    <div id="myMove1"></div>
+    <div id="myMove2"></div>
     <nav>
-       <div></div>
-       <div></div>
-
+        <div></div>
+        <div></div>
+        
     </nav>
     <!------------ Stepper component ------------>
+    
     <ul class="stepper-component">
         <li>
-            <i class="fa-solid fa-circle-info"></i>
             <div class="active progress one">
                 <p>1</p>
                 <i class="checkMark fa-solid fa-check"></i>
             </div>
-            <p class="text">Info</p>
         </li>
         <li>
-            <i class="fa-brands fa-quinscape"></i>
             <div class="progress two">
                 <p>2</p>
                 <i class="checkMark fa-solid fa-check"></i>
             </div>
-            <p class="text">Quiz</p>
         </li>
         <li>
-            <i class="fa-solid fa-square-poll-vertical"></i>
             <div class="progress three">
                 <p>3</p>
                 <i class="checkMark fa-solid fa-check"></i>
             </div>
-            <p class="text">Result</p>
         </li>
     </ul>
     
     <!-- title -->
-    <h2 id="title">PHP Knowledge Test-Frontend</h2>
-    <!-- Question -->
-    <div id="card-Question">
-        <div id="circle">
-            <img src="images/php.png" alt="" width="102%">
+
+    <section class="info">
+        <h1>PHP Knowledge Test - Frontend</h1>
+        <p>When we think of the online quiz, we automatically think of
+            a fun and entertaining question-and-answer game, which allows you to test
+            your knowledge dominates.
+            and here it is app to test the knowledge of the candidates at the PHP level. </p>
+            <button onclick=""> NEXT</button>
+    </section>
+    <div class="">
+        <h2 id="title">PHP Knowledge Test-Frontend</h2>
+        <!-- Question -->
+        <div id="card-Question">
+            <div id="circle">
+                <img src="images/php.png" alt="" width="102%">
         </div>
         <p id="text" >
             <span>How many spikes does a porcupine have ?</span>
@@ -72,11 +75,16 @@
         <button type="button" class="card" id="card4" onclick="reponse(this)" value="4"></button>
         <!-- <div class="bf"></div> -->
     </div>
-    <!-- footer -->
-    <footer>
+   </div>
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+   <div >
+
+</div>
+<!-- footer -->
+<footer>
+    
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
