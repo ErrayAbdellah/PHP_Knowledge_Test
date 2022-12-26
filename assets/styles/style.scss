@@ -1,10 +1,13 @@
 $bady-color :#4f3e75;
 $text-color-yellow :#F2E205;
  
-
+*{
+    padding:0;
+    margin: 0;
+}
 body{
     background-color: $bady-color;
-    // height: 100vh;
+    //height: 100vh;
 }
 
 #title{
@@ -108,7 +111,7 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 70%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -223,3 +226,168 @@ body{
 	50% {opacity: 1; background:#000;} 
 	100% {transform:rotate(0.5turn); left:80%; background:#ff0;} 
 	}     
+
+    #checking{
+        text-align: center;
+    }
+// .imgQuiz{
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+#bodyHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#imgsHome{
+    
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;
+    img{
+        position: absolute;
+        top: 0;
+        //width: 100%;
+        pointer-events: none;
+    }
+    #imgStars{
+        height: 100%;
+        object-fit: cover;
+        top: 0 ;
+        //position: relative;
+        animation-name: imgStars;
+        animation-duration: 4s;
+        animation-delay: -2s;
+      @keyframes imgStars {
+        0%   { left:20%; top:1000px;}
+        100% { left:20%; top:0;}
+      }
+    }
+    #moom{
+        width: 20%;
+        mix-blend-mode: screen;
+        top: 0;
+        //position: relative;
+        animation-name: moom;
+        animation-duration: 4s;
+        animation-delay: -2s;
+        align-self: center;
+      @keyframes moom {
+        0%   { left:50%; top:1000px;}
+        100% { left:40%; top:0;}
+      }
+
+    }
+    #mountains_behind{
+        width: 60% ;
+        bottom: 0;
+        top: initial;
+        position: sticky;
+        animation-name: mountains_behind;
+        animation-duration: 4s;
+        animation-delay: -2s;
+      @keyframes mountains_behind {
+        0%   { left:2000px; top:initial;}
+        100% { left:0; top:initial;}
+        }
+    }
+    #mountains_front{
+        bottom: 0;
+        top: initial;
+        z-index: 1000;
+        width: 100%;
+        //position: relative;
+        animation-name: mountains_front;
+        animation-duration: 4s;
+        animation-delay: -2s;
+      @keyframes mountains_front {
+        0%   { left:2000px; top:initial;}
+        100% { left:0; top:initial;}
+        }
+        
+    }
+}
+// #Stars{
+//     width: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+
+
+
+.stepper-component{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        >i{
+            margin: 0 85px;
+            font-size: 25px;
+        }
+        .text{
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .progress{
+            margin: 6px 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #202731;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            position: relative;
+            cursor: pointer;
+            .checkMark{
+                font-size: 13px;
+                display: none;
+            }
+            p{
+                font-size: 12px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 164px;
+                height: 5px;
+                background-color: #202731;
+                right: 30px;
+            }
+            &.one::after{
+                width: 0;
+                height: 0;
+            }
+        }
+        .active{
+            background-color: rgb(255, 118, 255);
+            &::after{
+                background-color: rgb(255, 118, 255);
+            }
+            p{
+                display: none;
+            }
+            .checkMark{
+                display: flex;
+            }
+        }
+    }
+}

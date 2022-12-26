@@ -37,6 +37,7 @@ let indexQst = 0 ;
   function getData(){
     //console.log()
     if(indexQst <countQst){
+      getQuestions();
       qstCard.innerText = questionObjs[indexQst]['question'];
       card1.innerText   = questionObjs[indexQst]['choice1'];
       card2.innerText   = questionObjs[indexQst]['choice2'];
@@ -45,8 +46,7 @@ let indexQst = 0 ;
       let answer        = questionObjs[indexQst]['answer'] ;
       return answer;
     }else{
-      location.reload();
-      alert("fin");
+      window.location.href="../../views/home.html";
     }
   }
   
@@ -54,31 +54,30 @@ let indexQst = 0 ;
   {
     getQuestions();
     test(getData(),index);
-    indexQst++;
+
+    setTimeout(() => {
+      indexQst++;
+    }, 500);
   }
   
   function test(question,index){
-      if(question==index.value)
-      {
-        //document.getElementById(index.id).style.backgroundColor = "blue";
-        // document.getElementById("hh").innerText = "blue";
-        setTimeout(() => {
-          $("#hh").text("Correct !!!");
-          $("#hh").css({'color':'green'});
-        }, 500);
-
-        score++;
-        //  alert("true");
-
-        //sleep(1000);
-        setTimeout(() => {
-          $("#hh").text("");
-        }, 1000);
-        
-      }else{
-        alert("false");
+    if(question==index.value)
+    {
+      $("#checking").text("Correct !!!");
+      $("#checking").css({'color':'green'});
+      setTimeout(() => {
+        $("#checking").text("");
+      }, 500);
+      
+      score++;
+    }else{
+      $("#checking").text("Incorrect !!!");
+      $("#checking").css({'color':'red'});
+      setTimeout(() => {
+        $("#checking").text("");
+      }, 500);
       }
-      //document.getElementById("hh").innerText = "";
+        
   }
 
   function randomCount(Count) {
