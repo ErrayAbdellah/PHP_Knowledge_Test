@@ -62,6 +62,11 @@ body{
             transform: scale(1.2);
         }
     }
+    .timer{
+        text-align: center;
+        font-size: 3rem;
+        color: #F299EC;
+    }
 }
 
 
@@ -86,6 +91,7 @@ body{
     a{
         text-decoration: none;
     }
+    
 }
 .card{
     
@@ -378,9 +384,13 @@ body{
         .active{
             z-index: 10;
             background-color: rgb(255, 118, 255);
+            box-shadow: 0 0 4px #ef91e9,
+            0 0 15px #ef91e9,
+            0 0 20px #ef91e9;
             
             &::after{
                 background-color: rgb(255, 118, 255);
+                
             }
             p{
                 display: none;
@@ -462,3 +472,4 @@ body{
     }
 
 }
+

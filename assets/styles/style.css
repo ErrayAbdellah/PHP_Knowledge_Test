@@ -49,6 +49,11 @@ body {
 #card-Question #circle:hover {
   transform: scale(1.2);
 }
+#card-Question .timer {
+  text-align: center;
+  font-size: 3rem;
+  color: #F299EC;
+}
 
 #TowImage {
   display: flex;
@@ -422,6 +427,7 @@ body {
 .stepper-component li .active {
   z-index: 10;
   background-color: rgb(255, 118, 255);
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9;
 }
 .stepper-component li .active::after {
   background-color: rgb(255, 118, 255);
