@@ -38,6 +38,7 @@ let indexQst = 0 ;
     //console.log()
     if(indexQst <countQst){
       getQuestions();
+      document.querySelector("#NmbrQst").innerText = indexQst+"/"+countQst;
       qstCard.innerText = questionObjs[indexQst]['question'];
       card1.innerText   = questionObjs[indexQst]['choice1'];
       card2.innerText   = questionObjs[indexQst]['choice2'];
@@ -46,7 +47,10 @@ let indexQst = 0 ;
       let answer        = questionObjs[indexQst]['answer'] ;
       return answer;
     }else{
-      window.location.href="../../views/home.html";
+      $(".question").css({'display':'none'});
+      $(".info").css({'display':'none'});
+      $(".result").css({'display':'block'});
+      document.querySelector(".three").classList.add("active");
     }
   }
   
@@ -102,4 +106,14 @@ let indexQst = 0 ;
     } while (currentDate - date < milliseconds);
   }
 
+  $(".question").css({'display':'none'});
+  $(".result").css({'display':'none'});
+  // $(".info").css({'display':'none'});
+
+  function bntNext(){
+    $(".question").css({'display':'block'});
+    $(".info").css({'display':'none'});
+    $(".result").css({'display':'none'});
+    document.querySelector(".two").classList.add("active");
+  }
   //console.log(randomUniqueNum(10))

@@ -64,7 +64,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 50%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -366,7 +366,7 @@ body {
 .stepper-component {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 50px auto;
 }
 .stepper-component li {
   list-style: none;
@@ -399,17 +399,19 @@ body {
 }
 .stepper-component li .progress .checkMark {
   font-size: 2rem;
+  display: none;
+  z-index: 10;
 }
 .stepper-component li .progress p {
   font-size: 2rem;
   z-index: 10;
+  display: block;
 }
 .stepper-component li .progress::after {
   content: "";
   position: absolute;
   width: 16rem;
   height: 5px;
-  z-index: 0;
   background-color: #202731;
   right: 30px;
 }
@@ -418,8 +420,8 @@ body {
   height: 0;
 }
 .stepper-component li .active {
-  background-color: rgb(255, 118, 255);
   z-index: 10;
+  background-color: rgb(255, 118, 255);
 }
 .stepper-component li .active::after {
   background-color: rgb(255, 118, 255);
@@ -432,7 +434,7 @@ body {
 }
 
 .info {
-  width: 50rem;
+  width: 50%;
   text-align: center;
   margin: 3rem auto;
   background-color: #F2E205;
@@ -461,4 +463,32 @@ body {
   width: 8.2rem;
   height: 3.2rem;
   font-size: 1.6rem;
+}
+
+.result {
+  background-color: #F2E205;
+  width: 40%;
+  margin: 3rem auto;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
+}
+.result p {
+  margin-top: 12px;
+}
+.result button {
+  font-size: 1rem;
+  margin: 12px;
+  border-radius: 0.3rem;
+  width: 6rem;
+  background-color: #4f3e75;
+  height: 3rem;
+  border-style: none;
+  color: #fff;
+  box-shadow: 0 5px 5px #232323;
+}
+.result button:hover {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

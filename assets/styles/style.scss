@@ -63,38 +63,6 @@ body{
         }
     }
 }
-// #myMove
-// {  
-//  position:sticky;
-//     //border: 12px black solid;
-//   animation: mymove 5s infinite;
-
-//   width: 100px;
-//   height: 100px;
-//   border-radius: 50%;
-  
-//   transform: translate(var(--light-position-x, 0px), var(--light-position-y, 0px));
-//   background-color: #F2E205;
-//   opacity: 0.3;
-//   box-shadow: 0 0 4px #F2E205,
-//   0 0 15px #F2E205,
-//   0 0 20px #F2E205,
-//   0 0 30px #F2E205,
-//   0 0 50px #F2E205,
-//   0 0 70px #F2E205,
-//   0 0 80px #F2E205;
-
-// }
-// @keyframes mymove {
-//         0% { top: 0; left: 0; }
-//         30% { top: 50px; }
-//         68%, 72% { left: 50px; }
-//         100% { top: 100px; left: 100%; }
-//         100% { top: 100px; left: 100%; }
-//         68%, 72% { left: 50px; }
-//         30% { top: 50px; }
-//         0% { top: 0; left: 0; }
-// }
 
 
 #TowImage{
@@ -111,7 +79,7 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 50%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -354,7 +322,8 @@ body{
 .stepper-component{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 50px auto;
+    
     li{
         list-style: none;
         display: flex;
@@ -382,20 +351,22 @@ body{
             color: #fff;
             position: relative;
             cursor: pointer;
+            //display: block;
             .checkMark{
                 font-size: 2rem;
-                //display: none;
+                display: none;
+                z-index: 10;
             }
             p{
                 font-size: 2rem;
                 z-index: 10;
+                display: block;
             }
             &::after{
                 content: "";
                 position: absolute;
                 width: 16rem;
                 height: 5px;
-                z-index: 0;
                 background-color: #202731;
                 right: 30px;
             }
@@ -405,8 +376,9 @@ body{
             }
         }
         .active{
-            background-color: rgb(255, 118, 255);
             z-index: 10;
+            background-color: rgb(255, 118, 255);
+            
             &::after{
                 background-color: rgb(255, 118, 255);
             }
@@ -422,7 +394,7 @@ body{
 
 
 .info{
-    width: 50rem;
+    width: 50%;
     text-align: center;
     margin: 3rem auto ;
     background-color: $text-color-yellow;
@@ -454,4 +426,39 @@ body{
             font-size: 1.6rem;
         }
     }
+
+}
+
+.result{
+    background-color: $text-color-yellow;
+    width: 40%;
+    margin: 3rem auto ;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 1rem; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 0 4px #ef91e9,
+    0 0 15px #ef91e9,
+    0 0 20px #ef91e9,
+    0 0 30px #ef91e9;
+    p{
+        margin-top: 12px;
+    }
+    button{
+        font-size: 1rem;
+        margin: 12px;
+        border-radius: 0.3rem;
+        width: 6rem;
+        background-color: $bady-color;
+        height: 3rem;
+        border-style: none;
+        color: #fff;
+        &:hover{
+            font-size: 1.2rem;
+        }
+        box-shadow:0 5px 5px #232323,
+                  
+
+    }
+
 }

@@ -48,9 +48,9 @@
             a fun and entertaining question-and-answer game, which allows you to test
             your knowledge dominates.
             and here it is app to test the knowledge of the candidates at the PHP level. </p>
-            <button onclick=""> NEXT</button>
+            <button onclick="bntNext()"> NEXT</button>
     </section>
-    <div class="">
+    <div class="question">
         <h2 id="title">PHP Knowledge Test-Frontend</h2>
         <!-- Question -->
         <div id="card-Question">
@@ -58,8 +58,9 @@
                 <img src="images/php.png" alt="" width="102%">
         </div>
         <p id="text" >
-            <span>How many spikes does a porcupine have ?</span>
+            <span></span>
         </p>
+        <span id="NmbrQst"></span>
     </div>
     <!-- images -->
     <div id="TowImage">
@@ -67,6 +68,7 @@
         <img class="imgQuestion" src="images/circleQuistion.png" alt="">
     </div>
     <h1 id="checking" ></h1>
+    
     <!-- Responses -->
     <div class="cards">
         <button type="button" class="card" id="card1" onclick="reponse(this)" value="1"></button>
@@ -76,10 +78,14 @@
         <!-- <div class="bf"></div> -->
     </div>
    </div>
+   <div class="result">
+       <h1>All Done !!!</h1>
+       <p>Your score is <span>0/100</span></p>
+       <p>Click Submit To see the Questions's explication</p>
+       <button>Submit</button>
+       <!-- <button onclick="bntNext()">Go Back</button> -->
+   </div>
 
-   <div >
-
-</div>
 <!-- footer -->
 <footer>
     
