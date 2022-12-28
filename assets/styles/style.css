@@ -372,6 +372,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px auto;
+  width: 100%;
 }
 .stepper-component li {
   list-style: none;
@@ -392,7 +393,7 @@ body {
 }
 .stepper-component li .progress {
   margin: 3rem 0;
-  width: 5rem;
+  width: 5%;
   height: 5rem;
   border-radius: 50%;
   background-color: #202731;
@@ -415,7 +416,7 @@ body {
 .stepper-component li .progress::after {
   content: "";
   position: absolute;
-  width: 16rem;
+  width: 16%;
   height: 5px;
   background-color: #202731;
   right: 30px;

@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles/style.css">
-    <script src="https://kit.fontawesome.com/e29eb6764b.js" crossorigin="anonymous"></script>
-    <title>PHP_Knowledge_Test-Frontend</title>
-</head>
-<body>
+<?php  require "view/head.php" ;?>
+
+
     <div id="light"></div>
     <div id="myMove1"></div>
     <div id="myMove2"></div>
@@ -83,15 +75,8 @@
        <h1>All Done !!!</h1>
        <p>Your score is <span id="score"></span></p>
        <p>Click Submit To see the Questions's explication</p>
-       <button onclick="location.href='../index.html'" >Submit</button>
+       <button onclick="location.href='../index.php'" >Submit</button>
        <!-- <button onclick="bntNext()">Go Back</button> -->
    </div>
    
-<!-- footer -->
-<footer>
-    
-</footer>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="../assets/js/main.js"></script>
-</body>
-</html>
+<?php require 'view/footer.php'; ?>

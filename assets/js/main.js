@@ -32,7 +32,7 @@ let indexQst = 0 ;
          getData();
         }
       }
-      aj.open("GET","../../questions.json",true);
+      aj.open("GET","http://localhost/test/PHP_Knowledge_Test-Frontend/questions.json",true);
       aj.send();
     }
     //  console.log(countRandom);
@@ -54,7 +54,7 @@ let indexQst = 0 ;
       $(".info").css({'display':'none'});
       $(".result").css({'display':'block'});
       document.querySelector(".three").classList.add("active");
-      scoreResult.innerText = score+"/"+(countQst-1);
+      scoreResult.innerText = score+"/"+countQst;
     }
   }
   
@@ -134,7 +134,6 @@ let indexQst = 0 ;
           {
             sec = 9;
             indexQst++;
-            //clearInterval(t);
           }else{
             timer.innerHTML = '00:0'+sec;
             sec --;
