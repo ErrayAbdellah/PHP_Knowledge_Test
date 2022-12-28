@@ -1,18 +1,20 @@
 <link rel="stylesheet" href="../assets/styles/login.css">
 <?php require 'view/head.php' ;
-require '../_classes/DbConnection.php';
-      require '../functions/signIn.php';
+// require '../_classes/DbConnection.php';
+    require '../functions/signIn.php';
 
-    //   if(isset($_POST['btnSingUp']) )
-    //   {
-    //     if(isset($_POST['txtName']) && isset($_POST['txtTastname']) && isset($_POST['txtEmail']) && isset($_POST['txtPwd'])){
-    //         signIn($_POST['txtName'],$_POST['txtTastname'],$_POST['txtEmail'],$_POST['txtPwd']);
-    //     }else{
-    //         echo "walo";
-    //     }
-    //   }else{
-    //     echo  "walo ga3";
-    //   }
+      if(isset($_POST['btnSingUp']) )
+      {
+        if(isset($_POST['txtName']) && isset($_POST['txtTastname']) && isset($_POST['txtEmail']) && isset($_POST['txtPwd'])){
+            $name = $_POST['txtName'] ;
+            $lastName = $_POST['txtTastname'];
+            $email = $_POST['txtEmail'];
+            $pwd = $_POST['txtPwd'];
+        signUp($name,$lastName,$email,$pwd);
+        }else{
+            echo "walo";
+        }
+      }
 ?>
 <section id="singIn">
     <h3>Sign In</h3>
@@ -27,7 +29,7 @@ require '../_classes/DbConnection.php';
         </div>
         <div>
             <label for="Username" class="lbl">email</label>
-            <input type="password" class="txt-input" name="txtEmail">
+            <input type="email" class="txt-input" name="txtEmail">
         </div>
         <div>
             <label for="Password" class="lbl">Password</label>
