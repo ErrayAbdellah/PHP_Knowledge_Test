@@ -60,7 +60,8 @@ let indexQst = 0 ;
   
   function reponse(index)
   {
-    tm();
+    clearInterval(t);
+    tm(9);
     getQuestions();
     test(getData(),index);
     setTimeout(() => {
@@ -118,20 +119,22 @@ let indexQst = 0 ;
     $(".info").css({'display':'none'});
     $(".result").css({'display':'none'});
     document.querySelector(".two").classList.add("active");
-    tm();
+    tm(9);
     
   }
    //console.log(randomUniqueNum(10))
    //tm();
-   function tm(){
-     let sec = 9;
-     let t = setInterval(tms,1000);
+   //let sec = 9;
+   let t ;
+   function tm(sec){
+     t = setInterval(tms,1000);
+
      function tms(){
         if(sec===-1)
           {
             sec = 9;
             indexQst++;
-            clearInterval(t);
+            //clearInterval(t);
           }else{
             timer.innerHTML = '00:0'+sec;
             sec --;
