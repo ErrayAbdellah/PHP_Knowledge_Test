@@ -349,9 +349,9 @@ body{
         }
         .progress{
             margin:3rem 0;
-            width: 5%;
-            height: 5rem;
-            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            border-radius:50%;
             background-color: #202731;
             display: grid;
             place-items: center;
@@ -372,7 +372,7 @@ body{
             &::after{
                 content: "";
                 position: absolute;
-                width: 16%;
+                width: 16rem;
                 height: 5px;
                 background-color: #202731;
                 right: 30px;

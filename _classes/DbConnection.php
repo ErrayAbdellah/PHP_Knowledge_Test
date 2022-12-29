@@ -10,9 +10,9 @@ class Dbconnection{
     public function  connection(){
         try{
             $dsn = "mysql:host =$this->host;dbname=$this->dbName" ;
-            $conn = new PDO($dsn , $this->name ,$this->psw);
+            $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
+            $conn = new PDO($dsn , $this->name ,$this->psw,$options);
             return $conn ;
-            echo 'nady';
         }catch(PDOException $e){
             echo "connection is failed".$e->getMessage();
         }
