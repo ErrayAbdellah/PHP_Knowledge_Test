@@ -19,6 +19,3 @@ class Dbconnection{
     }
 
 }
-
-$con =  new Dbconnection();
-$con->connection();
