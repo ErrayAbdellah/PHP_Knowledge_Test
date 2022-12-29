@@ -25,18 +25,17 @@ let indexQst = 0 ;
 
     aj.onreadystatechange = function(){
       if(this.readyState===4 && this.status===200){
-         questionObjs = this.responseText;
-         console.log(questionObjs);
-        //  countQst = questionObjs.length ;
-        //  countRandom = randomCount(countQst);
-        //  arrTest = questionObjs;       
-        //  getData();
+         questionObjs = JSON.parse(this.responseText);
+         //console.log(questionObjs);
+         countQst = questionObjs.length ;
+         countRandom = randomCount(countQst);
+         arrTest = questionObjs;       
+         getData();
         }
       }
-      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php",true);
+      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php");
       aj.send();
-    }
-    //  console.log(countRandom);
+    } 
   
   function getData(){
     if(indexQst <countQst){
@@ -123,9 +122,7 @@ let indexQst = 0 ;
     tm(9);
     
   }
-   //console.log(randomUniqueNum(10))
-   //tm();
-   //let sec = 9;
+
    let t ;
    function tm(sec){
      t = setInterval(tms,1000);

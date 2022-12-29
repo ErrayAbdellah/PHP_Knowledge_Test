@@ -7,8 +7,6 @@ if(isset($_POST['bntSingInLogin'])){
    $pwd = $_POST['signInPwd'];
     signIn($email,$pwd); 
 }
-
-
 ?>
 
 <section id="singIn">
