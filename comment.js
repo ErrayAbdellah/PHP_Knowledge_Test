@@ -51,3 +51,23 @@
 // ('Les méthodes sont également appelées des___?','fonction membre','instances','objects','constructeurs',1),
 // ('Quelle mot-clé empêche une méthode d’être redéfinie par une classe file?','abstract','protected','final','static',3),
 // ('Nous pouvons utiliser ___ pour commenter une seule ligne?','/?','#','//','/* */',3)
+
+
+
+
+
+// function getQuestions(){
+//     let aj = new XMLHttpRequest();
+
+//     aj.onreadystatechange = function(){
+//       if(this.readyState===4 && this.status===200){
+//          questionObjs = JSON.parse(this.responseText);
+//          countQst = questionObjs.length ;
+//          countRandom = randomCount(countQst);
+//          arrTest = questionObjs;       
+//          getData();
+//         }
+//       }
+//       aj.open("GET","http://localhost/test/PHP_Knowledge_Test-Frontend/questions.json",true);
+//       aj.send();
+//     }
