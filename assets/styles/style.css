@@ -8,7 +8,7 @@ body {
 }
 
 #title {
-  color: #F2E205;
+  color: rgb(255, 118, 255);
   text-align: center;
   margin-top: 0%;
   position: relative;
@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   margin: auto;
   margin-top: 5rem;
-  background-color: #F2E205;
+  background-color: rgb(255, 118, 255);
   position: relative;
   box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
 }
@@ -444,7 +444,7 @@ body {
   width: 50%;
   text-align: center;
   margin: 3rem auto;
-  background-color: #F2E205;
+  background-color: rgb(255, 118, 255);
   border-radius: 2rem;
   box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
 }
@@ -473,7 +473,7 @@ body {
 }
 
 .result {
-  background-color: #F2E205;
+  background-color: rgb(255, 118, 255);
   width: 40%;
   margin: 3rem auto;
   border-radius: 2rem;

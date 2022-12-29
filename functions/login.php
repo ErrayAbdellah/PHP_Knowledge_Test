@@ -7,9 +7,6 @@ function signUp($name,$lastNmae,$email,$pwd){
     $stmt = $con->connection()->prepare($qry);
     $stmt->execute();
 }
-$email  = "a@gmail.com";
-$pwd = "123";
-signIn($email,$pwd);
 
 function signIn($email,$pwd){
     $con = new Dbconnection();

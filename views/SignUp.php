@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../assets/styles/login.css">
 <?php require 'view/head.php' ;
 // require '../_classes/DbConnection.php';
-    require '../functions/signIn.php';
+    require '../functions/login.php.php';
 
       if(isset($_POST['btnSingUp']) )
       {

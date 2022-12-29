@@ -25,14 +25,15 @@ let indexQst = 0 ;
 
     aj.onreadystatechange = function(){
       if(this.readyState===4 && this.status===200){
-         questionObjs = JSON.parse(this.responseText);
-         countQst = questionObjs.length ;
-         countRandom = randomCount(countQst);
-         arrTest = questionObjs;       
-         getData();
+         questionObjs = this.responseText;
+         console.log(questionObjs);
+        //  countQst = questionObjs.length ;
+        //  countRandom = randomCount(countQst);
+        //  arrTest = questionObjs;       
+        //  getData();
         }
       }
-      aj.open("GET","http://localhost/test/PHP_Knowledge_Test-Frontend/questions.json",true);
+      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php",true);
       aj.send();
     }
     //  console.log(countRandom);
