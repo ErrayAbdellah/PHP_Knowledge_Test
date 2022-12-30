@@ -1,5 +1,5 @@
 $bady-color :#4f3e75;
-$text-color-yellow :#F2E205;
+$text-color-yellow :rgb(255, 118, 255);
 
 *{
     padding: 0;
@@ -7,7 +7,7 @@ $text-color-yellow :#F2E205;
 }
 body{
     height:100vh;
-    background-color: $bady-color;
+    background-color: #904bda;
     display: flex;
     justify-content: center ;
     align-items: center;
@@ -18,23 +18,18 @@ body{
         padding: 2rem;
         border-radius: 1rem;
         box-shadow: 0 0 4px #ef91e9,
-                    0 0 15px #ef91e9,
-                    0 0 20px #ef91e9,
-                    0 0 30px #ef91e9;
+                    0 0 15px #ef91e9;
         h3{
            font-size: 2rem;
            text-align: center;
            margin-bottom: 3rem;
-        }
-        form{
-            text-align: center;
         }
         div{
             margin: 1rem;
             input{
                 width: 80%;
                 height: 1.5rem;
-                margin-top: 0.3rem;
+                margin-top: 0.3rem ;
                 border-style:none;
                 border-radius:0.2rem;
                 box-shadow:0 1px 20px  rgb(185, 185, 185);
@@ -43,13 +38,15 @@ body{
         .bntLogin{
             width: 6rem;
             height: 2rem ;
-            margin-top: 3rem;
+            margin:3rem 6rem 0px;
+            
             border-radius: 1rem;
             border-style: none;
             font-size: 1rem;
             box-shadow: 0px 4px 20px #a1a1a1;
             text-align: center;
             margin-right: 0;
+            text-align: center;
             &:hover{
                 background-color: aliceblue;
                 font-size:1.1rem;

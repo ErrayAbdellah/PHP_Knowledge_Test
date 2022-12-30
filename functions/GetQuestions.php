@@ -15,6 +15,5 @@ $data = array();
 foreach($result as $row){
     $data[] = $row;
 }
-       
        echo json_encode($data);
        

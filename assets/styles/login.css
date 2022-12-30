@@ -5,25 +5,22 @@
 
 body {
   height: 100vh;
-  background-color: #4f3e75;
+  background-color: #904bda;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 body #singIn {
   width: 20rem;
-  background-color: #F2E205;
+  background-color: rgb(255, 118, 255);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9;
 }
 body #singIn h3 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 3rem;
-}
-body #singIn form {
-  text-align: center;
 }
 body #singIn div {
   margin: 1rem;
@@ -39,13 +36,14 @@ body #singIn div input {
 body #singIn .bntLogin {
   width: 6rem;
   height: 2rem;
-  margin-top: 3rem;
+  margin: 3rem 6rem 0px;
   border-radius: 1rem;
   border-style: none;
   font-size: 1rem;
   box-shadow: 0px 4px 20px #a1a1a1;
   text-align: center;
   margin-right: 0;
+  text-align: center;
 }
 body #singIn .bntLogin:hover {
   background-color: aliceblue;

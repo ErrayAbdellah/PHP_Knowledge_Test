@@ -1,16 +1,16 @@
 <link rel="stylesheet" href="../assets/styles/login.css">
 <?php require 'view/head.php' ;
-// require '../_classes/DbConnection.php';
-    require '../functions/login.php.php';
+require '../_classes/user.php';
+    // require '../functions/login.php.php';
 
       if(isset($_POST['btnSingUp']) )
       {
         if(isset($_POST['txtName']) && isset($_POST['txtTastname']) && isset($_POST['txtEmail']) && isset($_POST['txtPwd'])){
             $name = $_POST['txtName'] ;
             $lastName = $_POST['txtTastname'];
-            $email = $_POST['txtEmail'];
+            $email = $_POST['txtEmail']; 
             $pwd = $_POST['txtPwd'];
-        signUp($name,$lastName,$email,$pwd);
+         User::signUp($name,$lastName,$email,$pwd);
         }else{
             echo "walo";
         }
