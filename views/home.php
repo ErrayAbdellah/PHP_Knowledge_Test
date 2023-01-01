@@ -2,8 +2,7 @@
 
 
     <div id="light"></div>
-    <div id="myMove1"></div>
-    <div id="myMove2"></div>
+   
     <nav>
         <div></div>
         <div></div>

@@ -33,7 +33,7 @@ let indexQst = 0 ;
          getData();
         }
       }
-      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php");
+      aj.open("POST","http://localhost/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php");
       aj.send();
     } 
   

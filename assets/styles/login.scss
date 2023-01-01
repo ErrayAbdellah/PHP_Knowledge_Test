@@ -1,4 +1,4 @@
-$bady-color :#4f3e75;
+$bady-color :#904bda;
 $text-color-yellow :rgb(255, 118, 255);
 
 *{
@@ -13,6 +13,7 @@ body{
     align-items: center;
     
     #singIn{
+        position: relative;
         width:20rem;
         background-color: $text-color-yellow;
         padding: 2rem;
@@ -54,3 +55,72 @@ body{
         }
     }
 }
+
+
+
+#myMove1
+{  
+      //border: 12px black solid;
+      // animation: mymove 5s infinite;
+    position:sticky;
+    margin-top: 0;
+    width: 100px;
+    height: 100px;
+    animation-name: menagerie; 				
+    //   border-radius: 50%;
+    animation-duration: 2.5s;        			
+    animation-iteration-count:infinite;  
+    animation-direction:alternate; //let's alternate back and forth!
+    position:absolute;	
+
+    background-color: #1e1d19;
+    opacity: 0.3;
+    box-shadow: 0 0 4px #F2E205,
+    0 0 15px #F2E205,
+    0 0 20px #F2E205,
+    0 0 30px #F2E205,
+    0 0 50px #F2E205,
+    0 0 70px #F2E205,
+    0 0 80px #F2E205;
+
+}
+#myMove2
+{  
+      //border: 12px black solid;
+      // animation: mymove 5s infinite;
+    position:sticky;
+
+    width: 100px;
+    height: 100px;
+    animation-name: menagerie2; 				
+    //   border-radius: 50%;
+    animation-duration: 2.5s;        			
+    animation-iteration-count:infinite;  
+    animation-direction:alternate; //let's alternate back and forth!
+    position:absolute;	
+
+    background-color: #1e1d19;
+    opacity: 0.3;
+    box-shadow: 0 0 4px #F2E205,
+    0 0 15px #F2E205,
+    0 0 20px #F2E205,
+    0 0 30px #F2E205,
+    0 0 50px #F2E205,
+    0 0 70px #F2E205,
+    0 0 80px #F2E205;
+
+}
+@keyframes menagerie {
+    0% {opacity: 0; background: #fff; left:0;} // start invisible at left
+	25% {opacity: 1; background:#000;} // go black 
+	50% {transform:rotate(0.5turn); left:80%; background:#ff0;} //spin, move, yellow
+	75% {opacity: 1; background:#000;}	// reverse original motion
+	100% {opacity: 0; background:#fff; left:0; transform:rotate(0); }
+       
+}
+
+@keyframes menagerie2 { 
+	0% {opacity: 0; background: #fff; left:0;} 
+	50% {opacity: 1; background:#000;} 
+	100% {transform:rotate(0.5turn); left:80%; background:#ff0;} 
+}   

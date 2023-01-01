@@ -13,7 +13,7 @@ class User{
     public function __construct($name,$lastname,$email,$pwd,$score)
     {
         $this->name     = $name     ;
-        $this->lastnam  = $lastname ;
+        $this->lastname  = $lastname ;
         $this->email    = $email    ;
         $this->pwd      = $pwd      ;
         $this->score    = $score    ;
@@ -31,13 +31,16 @@ class User{
         $qry = "SELECT * FROM usere where email like '$email' and psw like '$pwd'";
         $stmt = $con->connection()->prepare($qry);
         $stmt->execute();
-        $result = $stmt->fetchAll();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if($stmt->rowcount()!=0){
-            header("location: ../");
+
+            $_SESSION['user'] = $result;
+            // echo $_SESSION['user']['name'];
+            
+            header('location:../'); 
+
+        }else{
+            $_SESSION['errorLogin'] = 'User is not registered <br> !! Please recheck email or password' ;
         }
-        return $_SESSION[''] = $result = $stmt->fetchAll();
-        // echo "<pre>";
-        // print_r($stmt->rowCount());
-        // echo "</pre>";
     }
 }

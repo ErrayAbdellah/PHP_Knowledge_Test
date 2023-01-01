@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #4f3e75;
+  background-color: #904bda;
 }
 
 #title {
@@ -15,26 +15,24 @@ body {
 }
 
 #card-Question {
-  border: 3px #E3D8F2 solid;
   width: 60%;
   height: 15rem;
   border-radius: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: auto;
-  margin-top: 5rem;
+  margin: 4rem auto -5rem;
   background-color: rgb(255, 118, 255);
   position: relative;
-  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9;
 }
 #card-Question #text {
   margin: auto;
   text-align: center;
   padding: 0 1rem;
   font-family: "Times New Roman", Times, serif;
-  font-size: large;
-  color: #4f3e75;
+  font-size: 2rem;
+  color: #904bda;
 }
 #card-Question #circle {
   width: 5rem;
@@ -52,7 +50,7 @@ body {
 #card-Question .timer {
   text-align: center;
   font-size: 3rem;
-  color: #F299EC;
+  color: #F2E205;
 }
 
 #TowImage {
@@ -99,129 +97,6 @@ body {
   font-size: larger;
 }
 
-#myMove1 {
-  position: -webkit-sticky;
-  position: sticky;
-  width: 100px;
-  height: 100px;
-  -webkit-animation-name: menagerie;
-          animation-name: menagerie;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  position: absolute;
-  background-color: #1e1d19;
-  opacity: 0.3;
-  box-shadow: 0 0 4px #F2E205, 0 0 15px #F2E205, 0 0 20px #F2E205, 0 0 30px #F2E205, 0 0 50px #F2E205, 0 0 70px #F2E205, 0 0 80px #F2E205;
-}
-
-#myMove2 {
-  position: -webkit-sticky;
-  position: sticky;
-  width: 100px;
-  height: 100px;
-  -webkit-animation-name: menagerie2;
-          animation-name: menagerie2;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  position: absolute;
-  background-color: #1e1d19;
-  opacity: 0.3;
-  box-shadow: 0 0 4px #F2E205, 0 0 15px #F2E205, 0 0 20px #F2E205, 0 0 30px #F2E205, 0 0 50px #F2E205, 0 0 70px #F2E205, 0 0 80px #F2E205;
-}
-
-@-webkit-keyframes menagerie {
-  0% {
-    opacity: 0;
-    background: #fff;
-    left: 0;
-  }
-  25% {
-    opacity: 1;
-    background: #000;
-  }
-  50% {
-    transform: rotate(0.5turn);
-    left: 80%;
-    background: #ff0;
-  }
-  75% {
-    opacity: 1;
-    background: #000;
-  }
-  100% {
-    opacity: 0;
-    background: #fff;
-    left: 0;
-    transform: rotate(0);
-  }
-}
-
-@keyframes menagerie {
-  0% {
-    opacity: 0;
-    background: #fff;
-    left: 0;
-  }
-  25% {
-    opacity: 1;
-    background: #000;
-  }
-  50% {
-    transform: rotate(0.5turn);
-    left: 80%;
-    background: #ff0;
-  }
-  75% {
-    opacity: 1;
-    background: #000;
-  }
-  100% {
-    opacity: 0;
-    background: #fff;
-    left: 0;
-    transform: rotate(0);
-  }
-}
-@-webkit-keyframes menagerie2 {
-  0% {
-    opacity: 0;
-    background: #fff;
-    left: 0;
-  }
-  50% {
-    opacity: 1;
-    background: #000;
-  }
-  100% {
-    transform: rotate(0.5turn);
-    left: 80%;
-    background: #ff0;
-  }
-}
-@keyframes menagerie2 {
-  0% {
-    opacity: 0;
-    background: #fff;
-    left: 0;
-  }
-  50% {
-    opacity: 1;
-    background: #000;
-  }
-  100% {
-    transform: rotate(0.5turn);
-    left: 80%;
-    background: #ff0;
-  }
-}
 #checking {
   text-align: center;
 }
@@ -319,7 +194,7 @@ body {
 #imgsHome #mountains_front {
   bottom: 0;
   top: initial;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   -webkit-animation-name: mountains_front;
           animation-name: mountains_front;
@@ -360,6 +235,7 @@ body {
   border-radius: 12rem;
   padding-top: 1rem;
   text-decoration: none;
+  box-shadow: 0 5px 20px black;
 }
 #imgsHome #play:hover {
   font-size: 2.2rem;
@@ -371,13 +247,13 @@ body {
 .stepper-component {
   display: flex;
   justify-content: center;
-  margin-top: 50px auto;
-  width: 100%;
+  width: 90%;
+  margin-top: -2rem;
 }
 .stepper-component li {
   list-style: none;
   display: flex;
-  margin-left: 12rem;
+  margin-left: 9rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -406,7 +282,7 @@ body {
 .stepper-component li .progress .checkMark {
   font-size: 2rem;
   display: none;
-  z-index: 10;
+  z-index: 20;
 }
 .stepper-component li .progress p {
   font-size: 2rem;
@@ -416,7 +292,7 @@ body {
 .stepper-component li .progress::after {
   content: "";
   position: absolute;
-  width: 16rem;
+  width: 11.2rem;
   height: 5px;
   background-color: #202731;
   right: 30px;
@@ -446,7 +322,7 @@ body {
   margin: 3rem auto;
   background-color: rgb(255, 118, 255);
   border-radius: 2rem;
-  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9, 0 0 20px #ef91e9, 0 0 30px #ef91e9;
+  box-shadow: 0 0 4px #ef91e9, 0 0 15px #ef91e9;
 }
 .info h1 {
   font-size: 2rem;
@@ -462,7 +338,7 @@ body {
   margin-bottom: 2rem;
   border-radius: 1rem;
   font-size: 1.5rem;
-  background-color: #4f3e75;
+  background-color: #904bda;
   color: #fff;
   border-style: none;
 }
@@ -490,7 +366,7 @@ body {
   margin: 12px;
   border-radius: 0.3rem;
   width: 6rem;
-  background-color: #4f3e75;
+  background-color: #904bda;
   height: 3rem;
   border-style: none;
   color: #fff;
@@ -498,4 +374,56 @@ body {
 }
 .result button:hover {
   font-size: 1.2rem;
+}
+
+.navUser {
+  background-color: #E3D8F2;
+  height: 3.5rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 5px 20px black;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

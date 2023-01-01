@@ -1,4 +1,4 @@
-$bady-color :#4f3e75;
+$bady-color :#904bda;
 // $text-color-yellow :#F2E205;
 $text-color-yellow :rgb(255, 118, 255);
  
@@ -12,35 +12,33 @@ body{
 }
 
 #title{
-    color: $text-color-yellow;
+   color: $text-color-yellow;
    text-align: center;
    margin-top: 0%;
    position: relative;
 }
-#card-Question{
-    border: 3px #E3D8F2 solid; 
+#card-Question{ 
     width: 60%;
     height: 15rem;
     border-radius: 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: auto;
-    margin-top: 5rem;
+    margin: 4rem auto -5rem;
+    // margin-top: 4   rem;
     background-color: $text-color-yellow;
     position: relative;
   //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    box-shadow: 0 0 4px #ef91e9,
-    0 0 15px #ef91e9,
-    0 0 20px #ef91e9,
-    0 0 30px #ef91e9;
+  box-shadow: 0 0 4px #ef91e9,
+  0 0 15px #ef91e9;
     
     #text{
        margin: auto;
        text-align: center;
        padding: 0 1rem;
        font-family: 'Times New Roman', Times, serif;
-       font-size: large;
+       font-size: 2rem;
+
        color: $bady-color;
     }
     
@@ -66,7 +64,7 @@ body{
     .timer{
         text-align: center;
         font-size: 3rem;
-        color: #F299EC;
+        color: #F2E205;
     }
 }
 
@@ -118,100 +116,12 @@ body{
     }
 }
 
-// #light {
-    // width: 100px;
-    // height: 100px;
-    // border-radius: 50%;
-    // position: absolute;
-    // transform: translate(var(--light-position-x, 0px), var(--light-position-y, 0px));
-    // background-color: #F2E205;
-    // opacity: 0.3;
-    // box-shadow: 0 0 4px #F2E205,
-    // 0 0 15px #F2E205,
-    // 0 0 20px #F2E205,
-    // 0 0 30px #F2E205,
-    // 0 0 50px #F2E205,
-    // 0 0 70px #F2E205,
-    // 0 0 80px #F2E205;
-//   }
+  
 
-#myMove1
-{  
-      //border: 12px black solid;
-      // animation: mymove 5s infinite;
-    position:sticky;
-
-    width: 100px;
-    height: 100px;
-    animation-name: menagerie; 				
-    //   border-radius: 50%;
-    animation-duration: 2.5s;        			
-    animation-iteration-count:infinite;  
-    animation-direction:alternate; //let's alternate back and forth!
-    position:absolute;	
-
-    background-color: #1e1d19;
-    opacity: 0.3;
-    box-shadow: 0 0 4px #F2E205,
-    0 0 15px #F2E205,
-    0 0 20px #F2E205,
-    0 0 30px #F2E205,
-    0 0 50px #F2E205,
-    0 0 70px #F2E205,
-    0 0 80px #F2E205;
-
-}
-#myMove2
-{  
-      //border: 12px black solid;
-      // animation: mymove 5s infinite;
-    position:sticky;
-
-    width: 100px;
-    height: 100px;
-    animation-name: menagerie2; 				
-    //   border-radius: 50%;
-    animation-duration: 2.5s;        			
-    animation-iteration-count:infinite;  
-    animation-direction:alternate; //let's alternate back and forth!
-    position:absolute;	
-
-    background-color: #1e1d19;
-    opacity: 0.3;
-    box-shadow: 0 0 4px #F2E205,
-    0 0 15px #F2E205,
-    0 0 20px #F2E205,
-    0 0 30px #F2E205,
-    0 0 50px #F2E205,
-    0 0 70px #F2E205,
-    0 0 80px #F2E205;
-
-}
-@keyframes menagerie {
-    0% {opacity: 0; background: #fff; left:0;} // start invisible at left
-	25% {opacity: 1; background:#000;} // go black 
-	50% {transform:rotate(0.5turn); left:80%; background:#ff0;} //spin, move, yellow
-	75% {opacity: 1; background:#000;}	// reverse original motion
-	100% {opacity: 0; background:#fff; left:0; transform:rotate(0); }
-       
+#checking{
+    text-align: center;
 }
 
-@keyframes menagerie2 { 
-	0% {opacity: 0; background: #fff; left:0;} 
-	50% {opacity: 1; background:#000;} 
-	100% {transform:rotate(0.5turn); left:80%; background:#ff0;} 
-	}     
-
-    #checking{
-        text-align: center;
-    }
-// .imgQuiz{
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
 #bodyHome{
     display: flex;
     justify-content: center;
@@ -266,19 +176,11 @@ body{
         width: 60% ;
         bottom: 0;
         top: initial;
-    //     position:  initial ;
-    //     animation-name: mountains_behind;
-    //     animation-duration: 4s;
-    //     animation-delay: -2s;
-    //   @keyframes mountains_behind {
-    //     0%   { left:2000px; top:initial;}
-    //     100% { left:0; top:initial;}
-    //     }
     }
     #mountains_front{
         bottom: 0;
         top: initial;
-        z-index: 1000;
+        z-index: 10;
         width: 100%;
         //position: relative;
         animation-name: mountains_front;
@@ -301,6 +203,7 @@ body{
         border-radius: 12rem;
         padding-top: 1rem;
         text-decoration: none;
+        box-shadow: 0 5px 20px black;
         &:hover{
             //background-color: rgb(113, 113, 113);
             font-size: 2.2rem;
@@ -315,27 +218,18 @@ body{
 
     }
 }
-// #Stars{
-//     width: 50%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-
-
-
 
 .stepper-component{
     display: flex;
     justify-content: center;
-    margin-top: 50px auto;
-    width: 100%;
+    width: 90%;
+    margin-top: -2rem;
+   
     
     li{
         list-style: none;
         display: flex;
-        margin-left: 12rem;
+        margin-left: 9rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -363,7 +257,7 @@ body{
             .checkMark{
                 font-size: 2rem;
                 display: none;
-                z-index: 10;
+                z-index: 20;
             }
             p{
                 font-size: 2rem;
@@ -373,7 +267,7 @@ body{
             &::after{
                 content: "";
                 position: absolute;
-                width: 16rem;
+                width: 11.2rem;
                 height: 5px;
                 background-color: #202731;
                 right: 30px;
@@ -392,7 +286,6 @@ body{
             
             &::after{
                 background-color: rgb(255, 118, 255);
-                
             }
             p{
                 display: none;
@@ -412,9 +305,7 @@ body{
     background-color: $text-color-yellow;
     border-radius: 2rem ;
     box-shadow: 0 0 4px #ef91e9,
-    0 0 15px #ef91e9,
-    0 0 20px #ef91e9,
-    0 0 30px #ef91e9;
+                0 0 15px #ef91e9;
     h1{
         font-size: 2rem;
     }
@@ -475,3 +366,58 @@ body{
 
 }
 
+
+
+.navUser{
+
+    background-color: #E3D8F2;
+    height: 3.5rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 5px 20px black;
+}
+
+
+// navbar
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
