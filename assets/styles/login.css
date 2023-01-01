@@ -50,6 +50,9 @@ body #singIn .bntLogin:hover {
   background-color: aliceblue;
   font-size: 1.1rem;
 }
+body #singIn p {
+  margin-top: 2rem;
+}
 
 #myMove1 {
   position: -webkit-sticky;

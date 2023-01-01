@@ -5,6 +5,7 @@ let card4      = document.getElementById('card4');
 let qstCard    = document.getElementById('text');
 let bottun     =  document.querySelector('.card');
 let scoreResult = document.getElementById('score');
+let txtScore = document.getElementById('txtScore');
 let timer = document.querySelector('.timer');
 
 
@@ -26,7 +27,7 @@ let indexQst = 0 ;
     aj.onreadystatechange = function(){
       if(this.readyState===4 && this.status===200){
          questionObjs = JSON.parse(this.responseText);
-         //console.log(questionObjs);
+         questionObjs = JSON.parse(this.responseText);
          countQst = questionObjs.length ;
          countRandom = randomCount(countQst);
          arrTest = questionObjs;       
@@ -55,6 +56,8 @@ let indexQst = 0 ;
       $(".result").css({'display':'block'});
       document.querySelector(".three").classList.add("active");
       scoreResult.innerText = score+"/"+countQst;
+      txtScore.value = score ;
+      
     }
   }
   
@@ -138,3 +141,12 @@ let indexQst = 0 ;
           }
      }
     }
+
+
+    function sendScore(){
+     
+      //location.href = "../index.php"
+    }
+
+
+ 

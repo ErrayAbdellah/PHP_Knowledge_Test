@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="../assets/styles/login.css">
-<?php require 'view/head.php';
-require '../_classes/user.php';
-// session_start();
-if(isset($_POST['bntSingInLogin'])){
-   $email = htmlspecialchars(trim(strtolower($_POST['signInEmail'])));
-   $pwd = $_POST['signInPwd'];
-    User::signIn($email,$pwd); 
+<?php 
+    require 'view/head.php';
+    require '../_classes/user.php';
     
-}
+    if(isset($_POST['bntSingInLogin'])){
+    $email = htmlspecialchars(trim(strtolower($_POST['signInEmail'])));
+    $pwd = $_POST['signInPwd'];
+        User::signIn($email,$pwd); 
+        
+    }
 ?>
 <link rel="stylesheet" href="../assets/styles/login.css">
     <div id="myMove1"></div>
@@ -25,5 +26,7 @@ if(isset($_POST['bntSingInLogin'])){
         </div>
         <input type="submit" value="Sign In" name="bntSingInLogin" class="bntLogin">
     </form>
+    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="SignUp.php"
+                        style="color: #2233f0;">Register here</a></p>
 </section>
 <?php require 'view/footer.php'?>

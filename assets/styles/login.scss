@@ -13,10 +13,12 @@ body{
     align-items: center;
     
     #singIn{
+       
         position: relative;
         width:20rem;
         background-color: $text-color-yellow;
         padding: 2rem;
+        
         border-radius: 1rem;
         box-shadow: 0 0 4px #ef91e9,
                     0 0 15px #ef91e9;
@@ -26,6 +28,7 @@ body{
            margin-bottom: 3rem;
         }
         div{
+            
             margin: 1rem;
             input{
                 width: 80%;
@@ -52,6 +55,9 @@ body{
                 background-color: aliceblue;
                 font-size:1.1rem;
             }
+        }
+        p{
+            margin-top: 2rem;
         }
     }
 }

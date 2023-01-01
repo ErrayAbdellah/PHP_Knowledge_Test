@@ -20,10 +20,15 @@ class User{
     }
 
     public static function signUp($name,$lastNmae,$email,$pwd){
+       try{
         $con = new Dbconnection();
         $qry = "INSERT INTO `usere`(`name`, `lastName`, `email`, `psw`) VALUES ('$name','$lastNmae','$email','$pwd')";
         $stmt = $con->connection()->prepare($qry);
         $stmt->execute();
+            header('location:../views/signIn.php');
+       }catch(PDOException $e){
+            echo "error" . $e->getMessage();
+       }
     }
     
     public static function signIn($email,$pwd){
@@ -35,12 +40,12 @@ class User{
         if($stmt->rowcount()!=0){
 
             $_SESSION['user'] = $result;
-            // echo $_SESSION['user']['name'];
-            
             header('location:../'); 
 
         }else{
             $_SESSION['errorLogin'] = 'User is not registered <br> !! Please recheck email or password' ;
         }
     }
+
+    
 }

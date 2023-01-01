@@ -1,4 +1,10 @@
-<?php  require "view/head.php" ;?>
+<?php  
+    require "view/head.php" ;
+
+    // if(isset($_POST['btnSubmmitScore'])){
+    // header('location:../index.phphh');
+    //     }
+?>
 
 
     <div id="light"></div>
@@ -72,9 +78,12 @@
    </div>
    <div class="result">
        <h1>All Done !!!</h1>
-       <p>Your score is <span id="score"></span></p>
+       <p>Your score is <span id="score" ></span></p>
+       <input type="text" name="txtScore" id="txtScore">
        <p>Click Submit To see the Questions's explication</p>
-       <button onclick="location.href='../index.php'" >Submit</button>
+       <form action="../index.php" methode="post">
+           <button onclick="sendScore()" name="">Submit</button>
+        </form>
        <!-- <button onclick="bntNext()">Go Back</button> -->
    </div>
    

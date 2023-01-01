@@ -1,5 +1,16 @@
-<?php require './views/view/head.php';
-session_start();?>
+<?php 
+    require './views/view/head.php';
+    require '_classes/user.php';
+
+    if(isset($_POST['btnLogout'])){
+        // User::logout();
+        unset($_SESSION['user']);
+        header('location:views/signIn.php');
+    }
+    if(!isset($_SESSION['user'])){
+        header('location:views/signIn.php');
+        }
+?>
     <!-- <H1 style="color: aliceblue;"></H1> -->
     <nav class="navUser">
         <span style='font-size:2rem;'>&#128519;</span>
@@ -9,7 +20,9 @@ session_start();?>
                 <?=$_SESSION['user']['name'];  ?> 
                 <i class="fa fa-caret-down"></i>
             </a>
-            <div class="dropdown-content"><a href="#">Logout</a></div>
+            <form  method="POST">
+                <div class="dropdown-content"><input type="submit" name="btnLogout" href="views/signIn.php" value="Logout" ></div>
+            </form>
         </h3>        
     </nav>
         <section id="imgsHome">
