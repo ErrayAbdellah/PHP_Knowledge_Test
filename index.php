@@ -1,6 +1,7 @@
 <?php 
     require './views/view/head.php';
     require '_classes/user.php';
+    require "functions/services.php" ;
 
     if(isset($_POST['btnLogout'])){
         // User::logout();
@@ -10,11 +11,16 @@
     if(!isset($_SESSION['user'])){
         header('location:views/signIn.php');
         }
+       
+        
+        
+        
+        //var_dump($_SESSION);
 ?>
     <!-- <H1 style="color: aliceblue;"></H1> -->
     <nav class="navUser">
         <span style='font-size:2rem;'>&#128519;</span>
-        <h3>score <span>12</span></h3>
+        <h3>score <span><?php score(); ?></span></h3>
         <h3 class="dropdown">Hi!
             <a>
                 <?=$_SESSION['user']['name'];  ?> 
