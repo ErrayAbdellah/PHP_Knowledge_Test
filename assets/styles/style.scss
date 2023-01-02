@@ -37,7 +37,7 @@ body{
        text-align: center;
        padding: 0 1rem;
        font-family: 'Times New Roman', Times, serif;
-       font-size: 2rem;
+       font-size: 1.5rem;
 
        color: $bady-color;
     }
@@ -64,11 +64,9 @@ body{
     .timer{
         text-align: center;
         font-size: 3rem;
-        color: #F2E205;
+        color: #020202;
     }
 }
-
-
 #TowImage{
     display: flex;
     justify-content: space-between;
@@ -347,7 +345,7 @@ body{
     p{
         margin-top: 12px;
     }
-    button{
+    input{
         font-size: 1rem;
         margin: 12px;
         border-radius: 0.3rem;
@@ -430,3 +428,5 @@ body{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  

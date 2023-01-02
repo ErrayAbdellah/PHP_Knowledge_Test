@@ -10,10 +10,7 @@
     }
     if(!isset($_SESSION['user'])){
         header('location:views/signIn.php');
-        }
-       
-        
-        
+        }    
         
         //var_dump($_SESSION);
 ?>

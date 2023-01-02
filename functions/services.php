@@ -5,25 +5,22 @@
 
 
 function score(){
-    // echo " <script>console.log('hhhhhhhhhhhh')</script>";
-    $con = new Dbconnection();
-    // $result = $stmt->fetch();
     
-    // print_r($_SESSION);
-     echo $_SESSION['user']['score'];
-    // echo $_POST['txtScore'];
-    // if(isset($_POST['txtScore'])){
-        
-    //     if($_SESSION['user']['score'] <= $_POST['txtScore'] ){
+    $con = new Dbconnection();
 
-    //         unset($_SESSION['user']['score']);
-    //         $_SESSION['user']['score'] = $_POST['txtScore'];
+     echo $_SESSION['user']['score'];
+    if(isset($_GET['txtScore'])){
+        
+        if($_SESSION['user']['score'] <= $_GET['txtScore'] ){
+
+            unset($_SESSION['user']['score']);
+            $_SESSION['user']['score'] = $_GET['txtScore'];
             
-    //         $qry = "update usere set score = ".$_POST['txtScore']." WHERE id = ".$_SESSION['user']['id'];
-    //         $stmt = $con->connection()->prepare($qry);
-    //         $stmt->execute();
-    //     }
-    // } 
+            $qry = "update usere set score = ".$_GET['txtScore']." WHERE id = ".$_SESSION['user']['id'];
+            $stmt = $con->connection()->prepare($qry);
+            $stmt->execute();
+        }
+    } 
 
     
 

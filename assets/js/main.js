@@ -35,7 +35,7 @@ let indexQst      = 0 ;
 
         }
       }
-      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php");
+      aj.open("POST","http://localhost/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php");
       aj.send();
     } 
   
@@ -77,17 +77,19 @@ let indexQst      = 0 ;
   function test(question,index){
     if(question==index.value)
     {
-      $("#checking").text("Correct !!!");
-      $("#checking").css({'color':'green'});
+      
+      $("#card"+index.value).css({'background':'rgb(105, 243, 158)'});
       setTimeout(() => {
-        $("#checking").text("");
+        $("#card"+index.value).css({'background':'#F299EC'});
       }, 500);
       score++;
     }else{
-      $("#checking").text("Incorrect !!!");
-      $("#checking").css({'color':'red'});
+      $("#card"+index.value).css({'background':'rgb(218, 87, 87)'});
+      $("#card"+question).css({'background':'rgb(105, 243, 158)'});
+      
       setTimeout(() => {
-        $("#checking").text("");
+        $("#card"+index.value).css({'background':'#F299EC'});
+        $("#card"+question).css({'background':'#F299EC'});
       }, 500);
       }        
   }

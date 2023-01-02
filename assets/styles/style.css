@@ -31,7 +31,7 @@ body {
   text-align: center;
   padding: 0 1rem;
   font-family: "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #904bda;
 }
 #card-Question #circle {
@@ -50,7 +50,7 @@ body {
 #card-Question .timer {
   text-align: center;
   font-size: 3rem;
-  color: #F2E205;
+  color: #020202;
 }
 
 #TowImage {
@@ -361,7 +361,7 @@ body {
 .result p {
   margin-top: 12px;
 }
-.result button {
+.result input {
   font-size: 1rem;
   margin: 12px;
   border-radius: 0.3rem;
@@ -372,7 +372,7 @@ body {
   color: #fff;
   box-shadow: 0 5px 5px #232323;
 }
-.result button:hover {
+.result input:hover {
   font-size: 1.2rem;
 }
 
