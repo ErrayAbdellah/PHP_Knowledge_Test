@@ -1,21 +1,21 @@
-let card1      = document.getElementById('card1');
-let card2      = document.getElementById('card2');
-let card3      = document.getElementById('card3');
-let card4      = document.getElementById('card4');
-let qstCard    = document.getElementById('text');
-let bottun     =  document.querySelector('.card');
+let card1       = document.getElementById('card1');
+let card2       = document.getElementById('card2');
+let card3       = document.getElementById('card3');
+let card4       = document.getElementById('card4');
+let qstCard     = document.getElementById('text');
+let bottun      = document.querySelector('.card');
 let scoreResult = document.getElementById('score');
-let txtScore = document.getElementById('txtScore');
-let timer = document.querySelector('.timer');
+let txtScore    = document.getElementById('txtScore');
+let timer       = document.querySelector('.timer');
 
 
 getQuestions();
-let indexQst = 0 ;
- var light = document.getElementById('light');
- var questionObjs =[];
- let countQst = 0;
- let countRandom =[];
- let score = 0;
+let indexQst      = 0 ;
+ var light        = document.getElementById('light');
+ var questionObjs = [];
+ let countQst     = 0;
+ let countRandom  = [];
+ let score        = 0;
 
 
 
@@ -26,15 +26,16 @@ let indexQst = 0 ;
 
     aj.onreadystatechange = function(){
       if(this.readyState===4 && this.status===200){
+
          questionObjs = JSON.parse(this.responseText);
-         questionObjs = JSON.parse(this.responseText);
-         countQst = questionObjs.length ;
-         countRandom = randomCount(countQst);
-         arrTest = questionObjs;       
+         countQst     = questionObjs.length ;
+         countRandom  = randomCount(countQst);
+         arrTest      = questionObjs;       
          getData();
+
         }
       }
-      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php",true);
+      aj.open("POST","http://localhost/test/PHP_Knowledge_Test-Frontend/functions/GetQuestions.php");
       aj.send();
     } 
   
@@ -142,9 +143,13 @@ let indexQst = 0 ;
      }
     }
 
+    // setTimeout(sendScore(),3000);
 
     // function sendScore(){
-     
+    //  setTimeout(() => {
+      
+    //    location.readyState();
+    //  }, 3000);
     //   //location.href = "../index.php"
     // }
 

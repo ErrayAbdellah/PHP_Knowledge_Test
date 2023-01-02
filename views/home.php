@@ -6,6 +6,11 @@
         // score();
     // header('location:../index.phphh');
     //     }
+
+    if(isset($_POST['bntX'])) {
+        // unset($_SESSION['user']['score']);
+        $_SESSION['user']['score'] = $_POST['txtScore'];
+    }
 ?>
 
 
@@ -82,9 +87,9 @@
        <h1>All Done !!!</h1>
        <p>Your score is <span id="score" ></span></p>
        <p>Click Submit To see the Questions's explication</p>
-       <form action="../index.php" methode="get">
+       <form methode="POST" action="../index.php" >
            <input type="text" name="txtScore" id="txtScore" hidden>
-           <input type="submit" value="Submit">
+           <input type="submit" onclick="sendScore()" name="bntX" value="Submit">
         </form>
        <!-- <button onclick="bntNext()">Go Back</button> -->
    </div>
