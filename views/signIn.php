@@ -11,8 +11,16 @@
     }
 ?>
 <link rel="stylesheet" href="../assets/styles/login.css">
-    <div id="myMove1"></div>
-    <div id="myMove2"></div>
+
+<div id="myMove1"></div>
+<div id="myMove2"></div>
+<?php
+if(isset($_SESSION['errorLogin'])) { ?>
+    <div class='mssgerror'><h3><?= $_SESSION['errorLogin'] ?></h3></div>
+ <?php   
+    unset($_SESSION['errorLogin']);
+}
+ ?>
 <section id="singIn">
     <h3>Sign In</h3>
     <form method="post" action="signIn.php">
