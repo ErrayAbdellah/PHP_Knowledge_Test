@@ -22,7 +22,7 @@ class User{
     public static function signUp($name,$lastNmae,$email,$pwd){
        try{
         $con = new Dbconnection();
-        $qry = "INSERT INTO `usere`(`name`, `lastName`, `email`, `psw`) VALUES ('$name','$lastNmae','$email','$pwd')";
+        $qry = "INSERT INTO `usere`(`name`, `lastName`, `email`, `psw`,`score`) VALUES ('$name','$lastNmae','$email','$pwd',0)";
         $stmt = $con->connection()->prepare($qry);
         $stmt->execute();
             header('location:../views/signIn.php');

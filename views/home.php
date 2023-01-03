@@ -89,7 +89,7 @@
        <p>Click Submit To see the Questions's explication</p>
        <form methode="get" action="../index.php" >
            <input type="text" name="txtScore" id="txtScore" hidden>
-           <input type="submit" onclick="sendScore()" value="Submit">
+           <input type="submit" id="btnSubmitScore" onclick="sendScore()" value="Submit">
         </form>
        <!-- <button onclick="bntNext()">Go Back</button> -->
    </div>
